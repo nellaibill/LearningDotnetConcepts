@@ -17,9 +17,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskProgramming", "TaskProg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRSample", "SignalRSample\SignalRSample.csproj", "{317B3979-59C4-4AC0-BAD8-290AFB416911}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DSA", "DSA\DSA.csproj", "{A99C137F-334D-4F2C-9D20-72119F918F14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSA", "DSA\DSA.csproj", "{A99C137F-334D-4F2C-9D20-72119F918F14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{4092FB0F-378D-4ED0-B6F5-1A3D993A423B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{4092FB0F-378D-4ED0-B6F5-1A3D993A423B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filters", "Filters\Filters.csproj", "{1A3D9317-94B2-47E0-BD5A-CAFE7C170F5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +65,10 @@ Global
 		{4092FB0F-378D-4ED0-B6F5-1A3D993A423B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4092FB0F-378D-4ED0-B6F5-1A3D993A423B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4092FB0F-378D-4ED0-B6F5-1A3D993A423B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A3D9317-94B2-47E0-BD5A-CAFE7C170F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A3D9317-94B2-47E0-BD5A-CAFE7C170F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A3D9317-94B2-47E0-BD5A-CAFE7C170F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A3D9317-94B2-47E0-BD5A-CAFE7C170F5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
