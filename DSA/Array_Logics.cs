@@ -176,10 +176,6 @@
 
                 result[j + array1.Length] = array2[j];
             }
-
-
-
-
             return result;
 
         }

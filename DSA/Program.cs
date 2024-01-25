@@ -1,16 +1,22 @@
 ﻿using DSA;
 
-Console.WriteLine($"GetBalancedStringSplit : " + String_Array_Program.GetBalancedStringSplit("RLRRRLLRLL"));
-
-ArrayLogics.DrawLine();
-
+String_Array_Program.SecondLargestElement([1,2,4,7,7,5]);
+//Console.WriteLine($"RestoreString : " + String_Array_Program.RestoreString("codeleet", [4, 5, 6, 7, 0, 2, 1, 3]));
 
 
 
+    
 //LoadArrayPrograms();
 
 void LoadArrayPrograms()
 {
+    Console.WriteLine($"PrintPrimeNumbers : " + String.Join(", ", String_Array_Program.PrintPrimeNumbers(50000)));
+    Console.WriteLine($"LeftRightDifference : " + String.Join(", ", String_Array_Program.LeftRightDifference([10, 4, 8, 3])));
+    Console.WriteLine($"CheckPalindrome : " + Numbers.CheckPalindrome("radar"));
+    Console.WriteLine($"GetArrayStringsAreEqual : " + String_Array_Program.GetArrayStringsAreEqual(["ab", "c"], ["a", "bc"]));
+    Console.WriteLine($"GetBalancedStringSplit : " + String_Array_Program.GetBalancedStringSplit("RLRRRLLRLL"));
+
+    ArrayLogics.DrawLine();
     Console.WriteLine($"GetInterpret : " + String_Array_Program.GetInterpret("G()(al)"));
     ArrayLogics.DrawLine();
 

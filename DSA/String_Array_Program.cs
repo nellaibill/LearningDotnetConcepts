@@ -4,12 +4,135 @@ namespace DSA
 {
     public static class String_Array_Program
     {
+        public static void SecondLargestElement(int[] nums)
+        {
+            //{1,2,4,7,7,5}
+            int largest = nums[0];
+             int sLargest = -1;
+
+            for (int i = 1; i < nums.Length; i++)
+            {
+                if (nums[i] > largest)
+                {
+                    sLargest = largest;
+                    largest = nums[i];
+                }
+                else if ((nums[i] > sLargest) && nums[i] != largest) {
+                    sLargest = nums[i];
+                }
+            }
+            Console.WriteLine("sLargest" + sLargest);
+        }
+        //public static string RestoreString(string s, int[] indices)
+        //{
+        //    Console.WriteLine("Input: s = \"codeleet\", indices = [4,5,6,7,0,2,1,3]\r\nOutput: \"leetcode\"\r\nExplanation: As shown, \"codeleet\" becomes \"leetcode\" after shuffling.");
+        //    char[] chars = new char[s.Length];
+        //   for(int i=0;i<indices.Length; i++)
+        //    {
+        //       // char[i]= s[indices[i]];
+
+
+        //    }
+        //}
+        public static int[] PrintPrimeNumbers(int n)
+        {
+            List<int> result = new List<int>();
+            for (int i = 1; i < n; i++)
+            {
+                if (i is 1 or 2)
+                {
+                    result.Add(i);
+                    continue;
+                }
+                bool isPrime = true;
+
+                for (int j = 2; j <= Math.Sqrt(i); j++)
+                {
+                    if (i % j == 0)
+                    {
+                        isPrime = false;
+                        break;
+                    }
+
+                }
+                if (isPrime)
+                {
+                    result.Add(i);
+                }
+            }
+            return result.ToArray();
+
+        }
+
+        public static int[] LeftRightDifference(int[] nums)
+        {
+            Console.WriteLine("Input: nums = [10,4,8,3]\r\nOutput: [15,1,11,22]\r\n" +
+                "Explanation: " +
+                "The array leftSum is [0,10,14,22] and the array rightSum is [15,11,3,0]." +
+                "\r\nThe array answer is [|0 - 15|,|10 - 11|,|14 - 3|,|22 - 0|] = [15,1,11,22].");
+
+            int leftSum = 0;
+            int rightSum = nums.Sum();
+            int[] result = new int[nums.Length];
+            for (int i = 0; i < nums.Length; i++)
+            {
+                rightSum -= nums[i];
+                result[i] = Math.Abs(leftSum - rightSum);
+                leftSum += nums[i];
+            }
+            return result;
+
+            /*  int[] leftSum = new int[nums.Length];
+             int[] rightSum = new int[nums.Length];
+             int leftSumCount = 0, rightSumCount = 0;
+
+             int[] result = new int[nums.Length];
+             for (int i = 0; i < nums.Length; i++)
+             {
+                 if (i == 0)
+                 {
+                     leftSum[i] = leftSumCount;
+                     rightSum[nums.Length - 1 - i] = rightSumCount;
+                 }
+                 else
+                 {
+                     leftSumCount += nums[i - 1];
+                     leftSum[i] = leftSumCount;
+                     rightSumCount += nums[nums.Length - i];
+                     rightSum[nums.Length - 1 - i] = rightSumCount;
+                 }
+             }
+             for(int i = 0; i < nums.Length; i++)
+             {
+                 result[i]= Math.Abs(leftSum[i] - rightSum[i]);
+             }
+             return result */
+        }
+
+        public static bool GetArrayStringsAreEqual(string[] word1, string[] word2)
+        {
+            ArrayLogics.DrawLine();
+
+            return string.Concat(word1) == string.Concat(word2);
+
+
+            bool result = false;
+            StringBuilder stringBuilder1 = new StringBuilder();
+            StringBuilder stringBuilder2 = new StringBuilder();
+            foreach (string word in word1) { stringBuilder1.Append(word); }
+            foreach (string word in word2) { stringBuilder2.Append(word); }
+            if (stringBuilder1.ToString() == stringBuilder2.ToString())
+            {
+                return true;
+            }
+            return result;
+        }
         public static int GetBalancedStringSplit(string s)
         {
             Console.WriteLine("Input: s = \"RLRRRLLRLL\"\r\nOutput: 2\r\nExplanation: s can be split into \"RL\", \"RRRLLRLL\", each substring contains same number of 'L' and 'R'.\r\nNote that s cannot be split into \"RL\", \"RR\", \"RL\", \"LR\", \"LL\", because the 2nd and 5th substrings are not balanced.");
             int result = 0;
             int balancedCount = 0;
-            foreach(char c in s)
+            foreach (char c in s)
             {
                 if (c == 'R')
                 {
@@ -19,11 +142,12 @@ namespace DSA
                 {
                     balancedCount--;
                 }
-                if(balancedCount == 0 )
+                if (balancedCount == 0)
                 {
                     result++;
                 }
             }
+
             return result;
         }
         public static string GetInterpret(string command)
