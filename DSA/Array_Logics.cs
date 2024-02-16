@@ -309,7 +309,13 @@
 
         public static void DrawLine()
         {
-            Console.WriteLine("----------------------------------------------------------------------------------");
+            Console.WriteLine("--------------------------------");
+        }
+        public static void DrawLineWithHeading(string heading)
+        {
+            Console.WriteLine("--------------------------------");
+            Console.WriteLine(heading.ToUpper());
+            Console.WriteLine("--------------------------------");
         }
     }
 }

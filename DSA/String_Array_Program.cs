@@ -1,9 +1,101 @@
-﻿using System.Text;
+﻿using System.Collections;
+using System.Text;
 
 namespace DSA
 {
     public static class String_Array_Program
     {
+
+            public static int CountMatches(IList<IList<string>> items, string ruleKey, string ruleValue)
+            {
+            Console.WriteLine("Example 1:\r\n\r\nInput: items = [[\"phone\",\"blue\",\"pixel\"],[\"computer\",\"silver\",\"lenovo\"],[\"phone\",\"gold\",\"iphone\"]], ruleKey = \"color\", ruleValue = \"silver\"\r\nOutput: 1\r\nExplanation: There is only one item matching the given rule, which is [\"computer\",\"silver\",\"lenovo\"].\r\nExample 2:\r\n\r\nInput: items = [[\"phone\",\"blue\",\"pixel\"],[\"computer\",\"silver\",\"phone\"],[\"phone\",\"gold\",\"iphone\"]], ruleKey = \"type\", ruleValue = \"phone\"\r\nOutput: 2\r\nExplanation: There are only two items matching the given rule, which are [\"phone\",\"blue\",\"pixel\"] and [\"phone\",\"gold\",\"iphone\"]. Note that the item [\"computer\",\"silver\",\"phone\"] does not match.");
+                int ruleKeyIndex = 2;
+                int result = 0;
+                if (ruleKey == "type")
+                    ruleKeyIndex = 0;
+                else if (ruleKey == "color")
+                    ruleKeyIndex = 1;
+                for (int i = 0; i < items.Count; i++)
+                {
+                   if (items[i][ruleKeyIndex] == ruleValue)
+                        {
+                            result++;
+                        }
+                }
+                return result;
+            }
+ 
+        public static char firstNonRepeatedCharacter(string input)
+        {
+            if (input != null)
+            {
+               char[] chars = input.ToCharArray();
+               
+                foreach (char c in input) {
+                    int count = 0;
+                    for (int i = 0; i < chars.Length; i++)
+                    {
+                        if (chars[i] == c)
+                        {
+                            count++;
+                        }
+                        if (count == 1 && i == chars.Length-1)
+                        {
+                            return c;
+                        }
+                    }
+                }
+               
+            }
+            return '\0';
+        }
+        public static  bool IsPathCrossing(string path)
+        {
+            Console.WriteLine("Input: path = \"NESWW\"\r\nOutput: true\r\nExplanation: Notice that the path visits the origin twice.");
+            bool result = false;
+            char[] chars = path.ToCharArray();
+            int latitude = 0;
+            int longitude = 0;
+            HashSet<string> valuePairs = new (){ "0,0"};
+            for (int i = 0; i < chars.Length; i++)
+            {
+                switch (chars[i])
+                {
+                    case 'N':
+                        longitude += 1;
+                        break;
+                    case 'E':
+                        latitude += 1;
+                        break;
+                    case 'W':
+                        latitude -= 1;
+                        break;
+                    case 'S':
+                        longitude -= 1;
+                        break;
+                }
+                if (valuePairs.Contains($"{latitude},{longitude}")) return true;
+                valuePairs.Add($"{latitude},{longitude}");
+            }
+            return result;
+
+        }
+        public static string TruncateSentence(string s, int k)
+        {
+            Console.WriteLine("Input: s = \"Hello how are you Contestant\", k = 4\r\nOutput: \"Hello how are you\"\r\nExplanation:\r\nThe words in s are [\"Hello\", \"how\" \"are\", \"you\", \"Contestant\"].\r\nThe first 4 words are [\"Hello\", \"how\", \"are\", \"you\"].\r\nHence, you should return \"Hello how are you\".");
+
+            //Option 1
+            var words = s.Split(" ").Take(k);
+            return string.Join(" ", words);
+
+            //Option 2 :
+            //string result = "";
+            //for (int i = 0; i < k; i++)
+            //{
+            //    result += words[i].Trim() + " ";
+            //}
+            //return result.TrimEnd();
+        }
         public static void SecondLargestElement(int[] nums)
         {
             //{1,2,4,7,7,5}

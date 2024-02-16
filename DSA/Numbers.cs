@@ -9,6 +9,26 @@ namespace DSA
     public static class Numbers
     {
 
+        public static int[] circularRotation(int[] input)
+        {
+            Console.WriteLine("Input " + string.Join(" ",input));
+            int inputLength = input.Length;
+            int[] result = new int[inputLength];
+            
+            for(int i = 0; i < inputLength; i++)
+            {
+                if (i >=2)
+                {
+                    result[i] = input[i-2];
+                }
+                else
+                {
+                    result[i] = input[inputLength - (i + 1)];
+                }
+                
+            }
+            return result;
+        }
         public static bool AddTwoNumbersWithoutUsingPlusOperator(int a, int b)
         {
          

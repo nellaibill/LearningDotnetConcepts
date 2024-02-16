@@ -1,16 +1,75 @@
 ﻿using DSA;
+int[] numbers = [1, 3, 2, 5, 4];
+int[] swapResult = new int[numbers.Length];
 
-String_Array_Program.SecondLargestElement([1,2,4,7,7,5]);
-//Console.WriteLine($"RestoreString : " + String_Array_Program.RestoreString("codeleet", [4, 5, 6, 7, 0, 2, 1, 3]));
+Console.WriteLine(String_Array_Program.firstNonRepeatedCharacter("aabbcdd"));
+ArrayLogics.DrawLineWithHeading("returnFibonacciofGivenNumber");
+Console.WriteLine(RecursionProblems.returnFibonacciofGivenNumber(8));
 
 
+/*
+ReversePrograms();
+BasicMathsPrograms();
+LoadPatterns();
+LoadArrayPrograms();
+*/
+void ReversePrograms()
+{
+    ArrayLogics.DrawLineWithHeading("swapArray");
+    Console.WriteLine(String.Join("", RecursionProblems.swapArray(numbers, 0, swapResult)));
 
-    
-//LoadArrayPrograms();
+    ArrayLogics.DrawLineWithHeading("checkStringisPalindrome");
+    Console.WriteLine(RecursionProblems.checkStringisPalindrome("madamd", 0));
 
+    ArrayLogics.DrawLineWithHeading("returnMultiplyofN_Numbers");
+    Console.WriteLine("multiply of the given number is : " + RecursionProblems.returnMultiplyofN_Numbers(5));
+    ArrayLogics.DrawLineWithHeading("printSumofN_Numbers");
+    RecursionProblems.printSumofN_Numbers(1, 5, 0);
+
+    ArrayLogics.DrawLineWithHeading("printName");
+    RecursionProblems.printName(1, 5);
+    ArrayLogics.DrawLineWithHeading("printNumber");
+    RecursionProblems.printNumber(1, 5);
+    ArrayLogics.DrawLineWithHeading("printNumberReverse");
+    RecursionProblems.printNumberReverse(1, 5);
+    ArrayLogics.DrawLineWithHeading("printNumberBackTracking1TON");
+    RecursionProblems.printNumberBackTracking1TON(5, 5);
+    ArrayLogics.DrawLineWithHeading("printNumberBackTrackingNTO1");
+    RecursionProblems.printNumberBackTrackingNTO1(1, 5);
+}
+void BasicMathsPrograms()
+{
+    Console.WriteLine("GCD :" + BasicMaths.GCD(24, 36));
+
+    Console.WriteLine("CircularRotation Output :" + String.Join(" ", Numbers.circularRotation([1, 2, 3, 4, 5])));
+    Console.WriteLine("countDigits : " + BasicMaths.countDigits(12345));
+    Console.WriteLine("reverseNumber : " + BasicMaths.reverseNumber(12345));
+    BasicMaths.PrintAllDivisors(36);
+    BasicMaths.PrintAllDivisors(97);
+}
+void LoadPatterns()
+{
+    Patterns.PrintStarPattern1(4);
+    Patterns.PrintStarPattern2(4);
+    Patterns.PrintStarPattern3(5);
+    Patterns.PrintStarPattern4(5);
+    Patterns.PrintStarPattern5(5);
+    Patterns.PrintStarPattern6(5);
+    Patterns.PrintStarPattern7(5);
+    Patterns.PrintStarPattern8(5);
+    Patterns.PrintStarPattern10(5);
+    Patterns.PrintStarPattern11(5);
+
+}
 void LoadArrayPrograms()
 {
-    Console.WriteLine($"PrintPrimeNumbers : " + String.Join(", ", String_Array_Program.PrintPrimeNumbers(50000)));
+    //Console.WriteLine($"RestoreString : " + String_Array_Program.RestoreString("codeleet", [4, 5, 6, 7, 0, 2, 1, 3]));
+    Console.WriteLine(String_Array_Program.CountMatches([["phone", "blue", "pixel"], ["computer", "silver", "lenovo"], ["phone", "gold", "iphone"]], "color", "silver"));
+    Console.WriteLine(String_Array_Program.firstNonRepeatedCharacter("aabbcdd"));
+    Console.WriteLine(String_Array_Program.IsPathCrossing("SN"));
+    Console.WriteLine(String_Array_Program.TruncateSentence("Hello how are you Contestant", 4));
+    String_Array_Program.SecondLargestElement([1, 2, 4, 7, 7, 5]);
+    Console.WriteLine($"PrintPrimeNumbers : " + String.Join(", ", String_Array_Program.PrintPrimeNumbers(100)));
     Console.WriteLine($"LeftRightDifference : " + String.Join(", ", String_Array_Program.LeftRightDifference([10, 4, 8, 3])));
     Console.WriteLine($"CheckPalindrome : " + Numbers.CheckPalindrome("radar"));
     Console.WriteLine($"GetArrayStringsAreEqual : " + String_Array_Program.GetArrayStringsAreEqual(["ab", "c"], ["a", "bc"]));

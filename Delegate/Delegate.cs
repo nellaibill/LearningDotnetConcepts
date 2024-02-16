@@ -3,17 +3,14 @@
     delegate int calculator(int a, int b);
     public class Delegate
     {
-
         public static int Add(int a, int b)
         {
             return a + b;
         }
-
         public static int Sub(int a, int b)
         {
             return a - b;
         }
-
         static void Main(String[] args)
         {
             calculator calculator = new calculator(Add);
@@ -27,9 +24,7 @@
             {
                 Console.WriteLine(book.Name);
             }
-
         }
-
         public static List<Book> GetBooks()
         {
             return new List<Book>
