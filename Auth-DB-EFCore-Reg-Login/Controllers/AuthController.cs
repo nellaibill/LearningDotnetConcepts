@@ -42,7 +42,7 @@ namespace Auth_DB_EFCore_Reg_Login.Controllers
             {
                 return BadRequest();
             }
-            var jwt = _jwtservice.Generate(user.Id);
+            var jwt = _jwtservice.Generate(dto.Email);
             Response.Cookies.Append("jwt", jwt,new CookieOptions
             {
                 HttpOnly = true
@@ -58,15 +58,14 @@ namespace Auth_DB_EFCore_Reg_Login.Controllers
             try
             {
                 var jwt = Request.Cookies["jwt"];
-                var token = _jwtservice.Verify(jwt, userRequest.id);
+                var token = _jwtservice.Verify(jwt);
                 var userIdClaim = token.Claims.FirstOrDefault(c => c.Type == "userId");
-                if (userIdClaim != null && userIdClaim.Value == userRequest.id.ToString())
+                if (userIdClaim != null && userIdClaim.Value == userRequest.email)
                 {
-                    var user = _userRepository.GetById(userRequest.id);
+                    var user = _userRepository.GetByEmail(userRequest.email);
                     return Ok(user);
                 }
-               // int userId = int.Parse(userIdClaim?.userId);
-               return BadRequest();
+               return Unauthorized();
            
             }
 

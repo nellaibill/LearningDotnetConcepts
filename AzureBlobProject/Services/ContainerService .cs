@@ -5,46 +5,48 @@ namespace AzureBlobProject.Services
 {
     public class ContainerService : IContainerService
     {
-        private readonly BlobServiceClient _blobServiceClient;
+        private readonly BlobServiceClient _blobClient;
 
-        public ContainerService(BlobServiceClient blobServiceClient)
+        public ContainerService(BlobServiceClient blobClient)
         {
-            _blobServiceClient = blobServiceClient;
+            _blobClient = blobClient;
         }
 
         public async Task CreateContainer(string containerName)
         {
-            BlobContainerClient blobContainerClient = _blobServiceClient.GetBlobContainerClient(containerName);
+            BlobContainerClient blobContainerClient = _blobClient.GetBlobContainerClient(containerName);
             await blobContainerClient.CreateIfNotExistsAsync(PublicAccessType.BlobContainer);
+
         }
 
         public async Task DeleteContainer(string containerName)
         {
-            BlobContainerClient blobContainerClient = _blobServiceClient.GetBlobContainerClient(containerName);
+            BlobContainerClient blobContainerClient = _blobClient.GetBlobContainerClient(containerName);
             await blobContainerClient.DeleteIfExistsAsync();
         }
 
         public async Task<List<string>> GetAllContainer()
         {
-            List<string> containerNames = new();
+            List<string> containerName = new();
 
-            await foreach(BlobContainerItem blobContainerItem in _blobServiceClient.GetBlobContainersAsync())
+            await foreach (BlobContainerItem blobkContainerItem in _blobClient.GetBlobContainersAsync())
             {
-                containerNames.Add(blobContainerItem.Name);
+                containerName.Add(blobkContainerItem.Name);
             }
-            return containerNames;
+
+            return containerName;
         }
 
         public async Task<List<string>> GetAllContainerAndBlobs()
         {
             List<string> containerAndBlobNames = new();
-            containerAndBlobNames.Add("Account Name : " + _blobServiceClient.AccountName);
+            containerAndBlobNames.Add("Account Name : " + _blobClient.AccountName);
             containerAndBlobNames.Add("------------------------------------------------------------------------------------------------------------");
-            await foreach (BlobContainerItem blobContainerItem in _blobServiceClient.GetBlobContainersAsync())
+            await foreach (BlobContainerItem blobContainerItem in _blobClient.GetBlobContainersAsync())
             {
                 containerAndBlobNames.Add("--" + blobContainerItem.Name);
                 BlobContainerClient _blobContainer =
-                      _blobServiceClient.GetBlobContainerClient(blobContainerItem.Name);
+                      _blobClient.GetBlobContainerClient(blobContainerItem.Name);
                 await foreach (BlobItem blobItem in _blobContainer.GetBlobsAsync())
                 {
                     //get metadata

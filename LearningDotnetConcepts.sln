@@ -29,9 +29,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RabbitMQ.Consumer", "Rabbit
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth-DB-EFCore-Reg-Login", "Auth-DB-EFCore-Reg-Login\Auth-DB-EFCore-Reg-Login.csproj", "{A9E01243-4E24-4B54-AB3A-ABC2330C13F0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzuerFunctionApp1", "AzuerFunctionApp1\AzuerFunctionApp1.csproj", "{2F1A15F7-D989-4188-88AA-7009390C156D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureBlobProject", "AzureBlobProject\AzureBlobProject.csproj", "{60DC1701-A3AD-4A79-B190-F16DACFF7B1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureBlobProject", "AzureBlobProject\AzureBlobProject.csproj", "{60DC1701-A3AD-4A79-B190-F16DACFF7B1F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureFunctionTangyWeb", "AzureFunctionTangyWeb\AzureFunctionTangyWeb.csproj", "{B11BD32E-FB8E-4AEE-9CDD-88A72603D41F}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureFunctionsExample", "AzureFunctionsExample", "{316CB513-DBE1-48A8-B13D-521A8F856CD6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureTangyFunc", "AzureTangyFunc\AzureTangyFunc.csproj", "{5867244D-04DF-4E87-9191-97CD02C92CCA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -91,17 +95,25 @@ Global
 		{A9E01243-4E24-4B54-AB3A-ABC2330C13F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9E01243-4E24-4B54-AB3A-ABC2330C13F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9E01243-4E24-4B54-AB3A-ABC2330C13F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2F1A15F7-D989-4188-88AA-7009390C156D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2F1A15F7-D989-4188-88AA-7009390C156D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2F1A15F7-D989-4188-88AA-7009390C156D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2F1A15F7-D989-4188-88AA-7009390C156D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{60DC1701-A3AD-4A79-B190-F16DACFF7B1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{60DC1701-A3AD-4A79-B190-F16DACFF7B1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60DC1701-A3AD-4A79-B190-F16DACFF7B1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60DC1701-A3AD-4A79-B190-F16DACFF7B1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B11BD32E-FB8E-4AEE-9CDD-88A72603D41F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B11BD32E-FB8E-4AEE-9CDD-88A72603D41F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B11BD32E-FB8E-4AEE-9CDD-88A72603D41F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B11BD32E-FB8E-4AEE-9CDD-88A72603D41F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5867244D-04DF-4E87-9191-97CD02C92CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5867244D-04DF-4E87-9191-97CD02C92CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5867244D-04DF-4E87-9191-97CD02C92CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5867244D-04DF-4E87-9191-97CD02C92CCA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B11BD32E-FB8E-4AEE-9CDD-88A72603D41F} = {316CB513-DBE1-48A8-B13D-521A8F856CD6}
+		{5867244D-04DF-4E87-9191-97CD02C92CCA} = {316CB513-DBE1-48A8-B13D-521A8F856CD6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4DF4A64-36A2-4C83-BFDA-80167CCBD204}

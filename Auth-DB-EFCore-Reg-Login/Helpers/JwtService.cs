@@ -12,13 +12,13 @@ namespace Auth_DB_EFCore_Reg_Login.Helpers
         {
             _configuration = configuration;
         }
-        public string Generate(int id)
+        public string Generate(string email)
         {
             var symmetricSecurityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["Jwt:Key"]));
             var credentials = new SigningCredentials(symmetricSecurityKey, SecurityAlgorithms.HmacSha256Signature);
             var header = new JwtHeader(credentials);
             // Assuming 'id' is the user ID
-            var idClaim = new Claim("userId", id.ToString()); // Custom claim for user ID
+            var idClaim = new Claim("userId", email); // Custom claim for user ID
 
             var claims = new[] { idClaim };
 
@@ -28,7 +28,7 @@ namespace Auth_DB_EFCore_Reg_Login.Helpers
             return new JwtSecurityTokenHandler().WriteToken(securityToken);
         }
 
-        public JwtSecurityToken Verify(string jwt,int id)
+        public JwtSecurityToken Verify(string jwt)
         {
             var tokenHandler = new JwtSecurityTokenHandler();
             var key = Encoding.ASCII.GetBytes(_configuration["Jwt:Key"]);
@@ -43,32 +43,8 @@ namespace Auth_DB_EFCore_Reg_Login.Helpers
                 ValidateAudience = true,
                 ValidAudience = _configuration["Jwt:Audience"],
             }, out SecurityToken validatedToken);
-
-            // Check if the validated token is a JWT token
-            if (validatedToken is JwtSecurityToken jwtToken)
-            {
-                // Access the claims from the validated JWT token
-                var userIdClaim = jwtToken.Claims.FirstOrDefault(c => c.Type == "userId");
-
-                // Check if the userId claim exists and its value matches the expected value
-                if (userIdClaim != null && userIdClaim.Value == id.ToString())
-                {
-                    // Token validation successful
-                    return jwtToken;
-                }
-                else
-                {
-                    // Token validation failed due to userId claim mismatch
-                    throw new SecurityTokenValidationException("Invalid userId claim");
-                }
-            }
-            else
-            {
-                // Token validation failed due to token not being a JWT token
-                throw new SecurityTokenValidationException("Invalid token format");
-            }
-
-            //return (JwtSecurityToken)validatedToken;
+  
+            return (JwtSecurityToken)validatedToken;
         }
 
     }
