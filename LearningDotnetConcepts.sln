@@ -37,6 +37,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureFunctionsExample", "Az
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTangyFunc", "AzureTangyFunc\AzureTangyFunc.csproj", "{5867244D-04DF-4E87-9191-97CD02C92CCA}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureFundamentals", "AzureFundamentals", "{E4994F39-34B6-47DF-A043-2E54A34699C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureSpookyLogic", "AzureSpookyLogic\AzureSpookyLogic.csproj", "{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureLogicappExample", "AzureLogicappExample", "{F87278C9-31CB-4659-9172-9854278734CB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -107,6 +113,10 @@ Global
 		{5867244D-04DF-4E87-9191-97CD02C92CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5867244D-04DF-4E87-9191-97CD02C92CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5867244D-04DF-4E87-9191-97CD02C92CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -114,6 +124,8 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{B11BD32E-FB8E-4AEE-9CDD-88A72603D41F} = {316CB513-DBE1-48A8-B13D-521A8F856CD6}
 		{5867244D-04DF-4E87-9191-97CD02C92CCA} = {316CB513-DBE1-48A8-B13D-521A8F856CD6}
+		{07016C86-FCE0-49E5-BCAF-5D53B8ACC577} = {F87278C9-31CB-4659-9172-9854278734CB}
+		{F87278C9-31CB-4659-9172-9854278734CB} = {E4994F39-34B6-47DF-A043-2E54A34699C1}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F4DF4A64-36A2-4C83-BFDA-80167CCBD204}
