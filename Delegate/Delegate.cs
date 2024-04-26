@@ -13,7 +13,14 @@
         }
         static void Main(String[] args)
         {
-            calculator calculator = new calculator(Add);
+           // static int Square(int input) => input * input;
+           // static int multiplyBy10(int input) => input * 10;
+
+            var calculatorNew = new CalculatorNew();
+            var response = calculatorNew.Execute((x)=>x*x,Console.WriteLine, 5);
+            Console.ReadLine();
+            
+            /*calculator calculator = new calculator(Add);
             Console.WriteLine(calculator(10, 20));
 
             Func<int, int> square = number => number * number;
@@ -23,7 +30,7 @@
             foreach (var book in cheapBooks)
             {
                 Console.WriteLine(book.Name);
-            }
+            }*/
         }
         public static List<Book> GetBooks()
         {

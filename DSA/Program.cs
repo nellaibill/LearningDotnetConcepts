@@ -1,10 +1,8 @@
 ﻿using DSA;
 int[] numbers = [1, 3, 2, 5, 4];
 int[] swapResult = new int[numbers.Length];
-
-Console.WriteLine(String_Array_Program.firstNonRepeatedCharacter("aabbcdd"));
-ArrayLogics.DrawLineWithHeading("returnFibonacciofGivenNumber");
-Console.WriteLine(RecursionProblems.returnFibonacciofGivenNumber(8));
+//Patterns.PrintStarPattern18(4);
+LoadHashing();
 
 
 /*
@@ -12,7 +10,56 @@ ReversePrograms();
 BasicMathsPrograms();
 LoadPatterns();
 LoadArrayPrograms();
+
+Console.WriteLine(String_Array_Program.firstNonRepeatedCharacter("aabbcdd"));
+ArrayLogics.DrawLineWithHeading("returnFibonacciofGivenNumber");
+Console.WriteLine(RecursionProblems.returnFibonacciofGivenNumber(8));
+
+
 */
+
+void LoadHashing()
+{
+    int n = Convert.ToInt32(Console.ReadLine());
+    int[] arr = new int[n];
+
+    for (int i = 0; i < n; i++)
+    {
+        arr[i] = Convert.ToInt32(Console.ReadLine());
+    }
+
+    // Precompute
+    Dictionary<int, int> hash = new Dictionary<int, int>();
+    for (int i = 0; i < n; i++)
+    {
+        if (!hash.ContainsKey(arr[i]))
+        {
+            hash[arr[i]] = 1;
+        }
+        else
+        {
+            hash[arr[i]]++;
+        }
+    }
+
+    int q = Convert.ToInt32(Console.ReadLine());
+    while (q-- > 0)
+    {
+        int number;
+        if (!int.TryParse(Console.ReadLine(), out number))
+        {
+            Console.WriteLine("Invalid input for 'number'.");
+            return;
+        }
+        Console.WriteLine(hash.ContainsKey(number) ? hash[number] : 0);
+    }
+    //int[] arr = { 10, 5, 10, 15, 10, 5 };
+    //int n = arr.Length;
+    //ArrayLogics.DrawLineWithHeading("Hashing");
+    //Hashing.CountFreq(arr, n);
+}
+
+ 
 void ReversePrograms()
 {
     ArrayLogics.DrawLineWithHeading("swapArray");
@@ -59,6 +106,13 @@ void LoadPatterns()
     Patterns.PrintStarPattern8(5);
     Patterns.PrintStarPattern10(5);
     Patterns.PrintStarPattern11(5);
+    Patterns.PrintStarPattern12(9);
+    Patterns.PrintStarPattern13(5);
+    Patterns.PrintStarPattern14(5);
+    Patterns.PrintStarPattern15(5);
+    Patterns.PrintStarPattern16(10);
+    Patterns.PrintStarPattern17(4);
+
 
 }
 void LoadArrayPrograms()
@@ -96,7 +150,7 @@ void LoadArrayPrograms()
     Console.WriteLine($"GetBuildArray) : " + string.Join(", ", GetBuildArrayResult));
     ArrayLogics.DrawLine();
 
-    int GetMostWordsFoundResult = ArrayLogics.GetMostWordsFound(["alice and bob love leetcode", "i think so too", "this is great thanks very much"]);
+    int GetMostWordsFoundResult = ArrayLogics.GetMostWordsFound(["alice and bob love programming", "i think so too", "this is great thanks very much"]);
     Console.WriteLine($"GetMostWordsFound) : " + GetMostWordsFoundResult);
     ArrayLogics.DrawLine();
 
