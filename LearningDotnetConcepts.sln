@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningDotnetConcepts", "LearningDotnetConcepts\LearningDotnetConcepts.csproj", "{E2487A17-C8C0-4A5B-996F-9C4124198533}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Generics", "Generics\Generics.csproj", "{04CD1CD8-D0B7-4A1B-A71C-36F93D5178CD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Delegate", "Delegate\Delegate.csproj", "{6B870122-0057-414A-9677-CD9E35CBDE09}"
@@ -39,9 +37,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureTangyFunc", "AzureTang
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureFundamentals", "AzureFundamentals", "{E4994F39-34B6-47DF-A043-2E54A34699C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AzureSpookyLogic", "AzureSpookyLogic\AzureSpookyLogic.csproj", "{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureSpookyLogic", "AzureSpookyLogic\AzureSpookyLogic.csproj", "{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureLogicappExample", "AzureLogicappExample", "{F87278C9-31CB-4659-9172-9854278734CB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOPS", "OOPS\OOPS.csproj", "{7983F6C6-DD42-4BDB-BEA3-8E037CD3A568}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Synch-Asynch-Delegates-and-Events", "Synch-Asynch-Delegates-MulticastDelegates-and-Events\Synch-Asynch-Delegates-and-Events.csproj", "{12BD18EC-6B99-40DE-8E75-00BDB501F14D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpConcepts", "CSharpConcepts\CSharpConcepts.csproj", "{8031652E-C569-475C-A683-5406D7CC2AAE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,10 +53,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{E2487A17-C8C0-4A5B-996F-9C4124198533}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E2487A17-C8C0-4A5B-996F-9C4124198533}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E2487A17-C8C0-4A5B-996F-9C4124198533}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E2487A17-C8C0-4A5B-996F-9C4124198533}.Release|Any CPU.Build.0 = Release|Any CPU
 		{04CD1CD8-D0B7-4A1B-A71C-36F93D5178CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{04CD1CD8-D0B7-4A1B-A71C-36F93D5178CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04CD1CD8-D0B7-4A1B-A71C-36F93D5178CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -117,6 +117,18 @@ Global
 		{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7983F6C6-DD42-4BDB-BEA3-8E037CD3A568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7983F6C6-DD42-4BDB-BEA3-8E037CD3A568}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7983F6C6-DD42-4BDB-BEA3-8E037CD3A568}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7983F6C6-DD42-4BDB-BEA3-8E037CD3A568}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12BD18EC-6B99-40DE-8E75-00BDB501F14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12BD18EC-6B99-40DE-8E75-00BDB501F14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12BD18EC-6B99-40DE-8E75-00BDB501F14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12BD18EC-6B99-40DE-8E75-00BDB501F14D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8031652E-C569-475C-A683-5406D7CC2AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8031652E-C569-475C-A683-5406D7CC2AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8031652E-C569-475C-A683-5406D7CC2AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8031652E-C569-475C-A683-5406D7CC2AAE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
