@@ -1,0 +1,43 @@
+<html>
+<script>
+
+  (function () {
+
+    alert("IIFE");
+  })();
+
+
+  //Closure Concept
+
+  var customerNamespace = function () {
+    function Customer() {
+      var name = "Saleem"
+      function setName(value) {
+        name = value;
+      }
+      function getName() {
+        return name;
+      }
+      return {
+        getName,
+        setName
+      }
+    }
+    return {
+      Customer
+    }
+  }();
+
+  /*var x = Customer();
+  x.setName("testw")
+  alert(x.getName());
+  var test1 = new Customer();
+  test1.setName("Raja");
+  alert(test1.getName());*/
+  var Customer = "";
+  var x1 = new customerNamespace.Customer(); // Name Collision
+  x1.setName("fareed");
+  x1.getName();
+</script>
+
+</html>

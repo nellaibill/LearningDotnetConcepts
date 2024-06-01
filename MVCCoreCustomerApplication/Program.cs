@@ -8,6 +8,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddMvc(options => options.EnableEndpointRouting = false);
 builder.Services.AddScoped<IDal, AdoDal>();
+builder.Services.AddHttpContextAccessor();
 builder.Services.AddScoped<Customer>((ctx) =>
 {
     IHttpContextAccessor con = ctx.GetService<IHttpContextAccessor>();
