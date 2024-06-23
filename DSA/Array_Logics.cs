@@ -73,6 +73,7 @@
             //return result;
             int sum = 0;
             return nums.Select(x => x += sum).ToArray();
+            
         }
         public static int[] GetSmallerNumbersThanCurrent(int[] nums)
         {

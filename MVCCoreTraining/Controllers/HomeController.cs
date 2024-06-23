@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Caching.Memory;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using MVCCoreTraining.Models;
@@ -13,17 +14,22 @@ namespace MVCCoreTraining.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-       
+        private readonly IMemoryCache _cache;
 
-        public HomeController(ILogger<HomeController> logger,IConfiguration config,DBLayer db)
+        public HomeController(ILogger<HomeController> logger,IConfiguration config,DBLayer db,IMemoryCache cache)
         {
             _logger = logger;
+            _cache = cache;
             var conn = config["ConnectionStrings"];
             Console.WriteLine(conn);
         }
 
         public IActionResult Index()
         {
+            string emplist;
+            if (!_cache.TryGetValue("employeeList", out emplist)) { 
+                _cache.Set("employeeList", "Hello", TimeSpan.FromMinutes(10));
+        }
             return View();
         }
 

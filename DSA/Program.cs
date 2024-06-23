@@ -1,12 +1,35 @@
 ﻿using DSA;
-int[] numbers = [1, 3, 2, 5, 4];
-int[] swapResult = new int[numbers.Length];
-//Patterns.PrintStarPattern18(4);
-LoadHashing();
+
+Int_qns qns = new Int_qns();
+//qns.question1();
+//qns.question2();
+qns.question3();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
-ReversePrograms();
+  
+int[] numbers = [1, 3, 2, 5, 4];
+int[] swapResult = new int[numbers.Length];
+Patterns.PrintStarPattern18(4);
+LoadHashing();
+//ReversePrograms();
 BasicMathsPrograms();
 LoadPatterns();
 LoadArrayPrograms();
@@ -62,6 +85,8 @@ void LoadHashing()
  
 void ReversePrograms()
 {
+    int[] numbers = [1, 3, 2, 5, 4];
+    int[] swapResult = new int[numbers.Length];
     ArrayLogics.DrawLineWithHeading("swapArray");
     Console.WriteLine(String.Join("", RecursionProblems.swapArray(numbers, 0, swapResult)));
 

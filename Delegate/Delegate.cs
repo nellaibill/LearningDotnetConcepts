@@ -18,6 +18,7 @@
 
             var calculatorNew = new CalculatorNew();
             var response = calculatorNew.Execute((x)=>x*x,Console.WriteLine, 5);
+
             Console.ReadLine();
             
             /*calculator calculator = new calculator(Add);

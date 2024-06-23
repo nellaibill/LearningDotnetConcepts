@@ -1,7 +1,79 @@
 ﻿using CSharpConcepts;
 using System.Reflection;
 using System.Collections;
-using static System.Net.Mime.MediaTypeNames;
+using static CSharpConcepts.testDelegate;
+
+
+//PrivateConstructor pc = new PrivateConstructor();
+StaticConstructor.Log("Hello");
+EfCoreJoinLinq ef = new EfCoreJoinLinq();
+ef.getData();
+
+
+
+
+/*
+SealedClass s = new SealedClass();
+s.PrintMethod();
+s.PrintMethod();
+s.PrintMethod();
+/*
+ 
+Cat  catObj = new Cat();
+catObj.Eat();
+catObj.MakeSound();
+catObj.Run();
+
+Console.WriteLine(StaticClass_Utilities.Add(1,10));
+Console.WriteLine(StaticClass_Utilities.Add(2, 10));
+Console.WriteLine(StaticClass_Utilities.Add(3, 10));
+Console.WriteLine(StaticClass_Utilities.Multiply(1, 10));
+Console.WriteLine(StaticClass_Utilities.Multiply(2, 10));
+Console.WriteLine(StaticClass_Utilities.Multiply(3, 10));
+
+
+
+Utilities.WriteHeadingAndDrawLine("PrivateConstructor");
+PrivateConstructor.PrintMessage();
+
+string[] arr = new string[2];
+arr[0] = "a";
+arr[1] = "b";
+arr[2] = "c";
+
+
+ArrayList arrayList = new ArrayList();
+arrayList.Add("a");
+arrayList.Add(1);
+
+List<int> list = new List<int>();
+list.Add(1);
+list.Add(2);
+
+Hashtable ht = new Hashtable();
+ht.Add("a", "a");
+ht.Add("b", 1);
+
+Dictionary<int,int> ht2 = new Dictionary<int,int>();
+ht2.Add(1, 2);
+
+var test = Tuple.Create("Hello", 1, true);
+Console.WriteLine(test.Item1);
+Console.WriteLine(test.Item2);
+Console.WriteLine(test.Item3);
+
+var test1 = new { name = "test", num = 2, bol = true };
+Console.WriteLine(test1.name);
+
+testDelegate tst = new testDelegate();
+addnum test10 = new addnum(tst.sum);
+test10(10, 20);
+
+list.Select(a=>a.Equals(1)).ToList();
+
+Console.WriteLine(StaticClass_Utilities.Add(10, 20));
+Singleton singleton = Singleton.Instance;
+singleton.DoSomething();
 
 
 Utilities.WriteHeadingAndDrawLine("Const Vs Readonly");
@@ -251,3 +323,4 @@ static void Iterate2005AndAboveWithIEnumerable(IEnumerable<int> o)
         Console.WriteLine("Print Using IEnumerable  Current State is not possible so repeating " + i);
     }
 }
+*/

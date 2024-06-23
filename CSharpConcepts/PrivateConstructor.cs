@@ -12,6 +12,10 @@ namespace CSharpConcepts
         private PrivateConstructor()
         {
         }
+        private PrivateConstructor(string name)
+        {
+
+        }
 
         public static void PrintMessage()
         {

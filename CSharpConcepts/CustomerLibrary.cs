@@ -79,4 +79,16 @@ namespace CSharpConcepts
             return years;
         }
     }
+    public class testDelegate
+    {
+
+        public delegate void addnum(int x, int y);
+
+        public void sum(int a, int b)
+        {
+            Console.WriteLine(a + b); ;
+        }   
+       
+
+    }
 }

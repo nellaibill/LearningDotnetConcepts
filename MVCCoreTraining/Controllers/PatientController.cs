@@ -24,5 +24,6 @@ namespace MVCCoreTraining.Controllers
             _db.SaveChanges();
             return View("PatientDisplay");
         }
+        
     }
 }

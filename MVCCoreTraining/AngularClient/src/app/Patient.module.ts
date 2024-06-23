@@ -10,16 +10,22 @@ import { SecurityCheck } from './common/SecurityCheck';
 import { Config } from './common/Config';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { JwtInterceptor } from './JwtInterceptor';
+import { CustomerComponent } from './customer/customer.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
   declarations: [
     PatientAddComponent,
-    PatientLoginComponent,HomepageComponent
+    PatientLoginComponent,HomepageComponent, CustomerComponent, ParentComponent, ChildComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     RouterModule.forRoot(AppRoutes)
   ],
   providers: [

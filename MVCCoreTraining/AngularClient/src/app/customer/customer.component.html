@@ -1,0 +1,17 @@
+<form [formGroup]="customerObj.formGroup">
+Name : <input [(ngModel)]="customerObj.name" type="text" formControlName="CustomerNameControl"/><br>
+Code  : <input  [(ngModel)]="customerObj.code" [ngModelOptions]="{standalone:true}" type="text"/><br>
+<input type="button" [disabled]="!(customerObj.formGroup.valid)" value="Save" (click)="Add()"/>
+<div  [hidden]="!(customerObj.formGroup.controls['CustomerNameControl'].hasError('required'))">Name is required</div><br>
+
+</form>
+<table>
+  <tr>
+    <td>Name</td>
+    <td>Code</td>
+  </tr>
+  <tr *ngFor="let customer of customerObjs">
+    <td>{{customer.name}}</td>
+    <td>{{customer.code}}</td>
+  </tr>
+</table>
