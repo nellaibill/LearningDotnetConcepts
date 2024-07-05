@@ -2,17 +2,29 @@
 using System.Reflection;
 using System.Collections;
 using static CSharpConcepts.testDelegate;
+Cat c = new Cat();
+c.Eat();
 
+
+string[] test = new string[10];
+test[0] = "123";
+
+ArrayList test1 = new ArrayList();
+test1.Add("123456");
+
+Hashtable test2 = new Hashtable();
+test2.Add("a1", "123");
+
+string test3 = test2["a1"].ToString();
+Console.WriteLine(test3);
+
+/*
 
 //PrivateConstructor pc = new PrivateConstructor();
 StaticConstructor.Log("Hello");
 EfCoreJoinLinq ef = new EfCoreJoinLinq();
 ef.getData();
 
-
-
-
-/*
 SealedClass s = new SealedClass();
 s.PrintMethod();
 s.PrintMethod();

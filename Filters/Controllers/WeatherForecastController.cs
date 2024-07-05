@@ -2,6 +2,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Filters.Controllers
 {
+    [ServiceFilter(typeof(CustomExceptionFilter))]
+
     [ApiController]
     [Route("[controller]")]
     public class UsersController : ControllerBase
@@ -29,13 +31,15 @@ namespace Filters.Controllers
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
+            throw new Exception("Test exception");
+            /*
             return Enumerable.Range(1, 5).Select(index => new WeatherForecast
             {
                 Date = DateOnly.FromDateTime(DateTime.Now.AddDays(index)),
                 TemperatureC = Random.Shared.Next(-20, 55),
                 Summary = Summaries[Random.Shared.Next(Summaries.Length)]
             })
-            .ToArray();
+            .ToArray();*/
         }
     }
 }

@@ -51,7 +51,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EFCore", "EFCore\EFCore.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerformanceTuning", "PerformanceTuning\PerformanceTuning.csproj", "{93AF54F9-BC99-4774-AD39-DEDFE19E8980}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microservices", "Microservices\Microservices.csproj", "{0F266D64-6D84-4637-ACF2-F2B473D58701}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices", "Microservices\Microservices.csproj", "{0F266D64-6D84-4637-ACF2-F2B473D58701}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FunctionApp1", "FunctionApp1\FunctionApp1.csproj", "{90A7F065-61EC-452A-AC6C-BBDE3D17F7A0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +149,10 @@ Global
 		{0F266D64-6D84-4637-ACF2-F2B473D58701}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F266D64-6D84-4637-ACF2-F2B473D58701}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F266D64-6D84-4637-ACF2-F2B473D58701}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90A7F065-61EC-452A-AC6C-BBDE3D17F7A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90A7F065-61EC-452A-AC6C-BBDE3D17F7A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90A7F065-61EC-452A-AC6C-BBDE3D17F7A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90A7F065-61EC-452A-AC6C-BBDE3D17F7A0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

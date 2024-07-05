@@ -8,6 +8,10 @@ namespace CSharpConcepts
 {
     public abstract class abstract_sal
     {
+        public abstract_sal()
+        {
+            Console.WriteLine("baseclass");
+        }
         public abstract void Eat();
         public virtual void MakeSound()
         {
@@ -23,6 +27,10 @@ namespace CSharpConcepts
 
     public class Cat : abstract_sal
     {
+        public Cat()
+        {
+            Console.WriteLine("child class");
+        }
         public override void Eat()
         {
             Console.WriteLine("Cat - Should Eat");

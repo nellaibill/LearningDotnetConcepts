@@ -4,7 +4,11 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers((options)=> options.Filters.Add(new CustomActionFilterAttribute("From StartUp")));
+builder.Services.AddControllers(options =>
+{
+    options.Filters.Add(new CustomActionFilterAttribute("From StartUp"));
+    options.Filters.Add<CustomExceptionFilter>();
+});
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -17,11 +21,17 @@ if (app.Environment.IsDevelopment())
 {
     //app.UseSwagger();
     //app.UseSwaggerUI();
+    app.UseDeveloperExceptionPage();
+}
+else
+{
+    
 }
 
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
+app.UseMiddleware<ExceptionHandlingMiddleware>();
 
 app.MapControllers();
 
