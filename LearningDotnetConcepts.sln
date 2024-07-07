@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskProgramming", "TaskProg
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRSample", "SignalRSample\SignalRSample.csproj", "{317B3979-59C4-4AC0-BAD8-290AFB416911}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DSA", "DSA\DSA.csproj", "{A99C137F-334D-4F2C-9D20-72119F918F14}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{4092FB0F-378D-4ED0-B6F5-1A3D993A423B}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Filters", "Filters\Filters.csproj", "{1A3D9317-94B2-47E0-BD5A-CAFE7C170F5F}"
@@ -36,8 +34,6 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AzureSpookyLogic", "AzureSpookyLogic\AzureSpookyLogic.csproj", "{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "AzureLogicappExample", "AzureLogicappExample", "{F87278C9-31CB-4659-9172-9854278734CB}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOPS", "OOPS\OOPS.csproj", "{7983F6C6-DD42-4BDB-BEA3-8E037CD3A568}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Synch-Asynch-Delegates-and-Events", "Synch-Asynch-Delegates-MulticastDelegates-and-Events\Synch-Asynch-Delegates-and-Events.csproj", "{12BD18EC-6B99-40DE-8E75-00BDB501F14D}"
 EndProject
@@ -77,10 +73,6 @@ Global
 		{317B3979-59C4-4AC0-BAD8-290AFB416911}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{317B3979-59C4-4AC0-BAD8-290AFB416911}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{317B3979-59C4-4AC0-BAD8-290AFB416911}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A99C137F-334D-4F2C-9D20-72119F918F14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A99C137F-334D-4F2C-9D20-72119F918F14}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A99C137F-334D-4F2C-9D20-72119F918F14}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A99C137F-334D-4F2C-9D20-72119F918F14}.Release|Any CPU.Build.0 = Release|Any CPU
 		{4092FB0F-378D-4ED0-B6F5-1A3D993A423B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4092FB0F-378D-4ED0-B6F5-1A3D993A423B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4092FB0F-378D-4ED0-B6F5-1A3D993A423B}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -117,10 +109,6 @@ Global
 		{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{07016C86-FCE0-49E5-BCAF-5D53B8ACC577}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7983F6C6-DD42-4BDB-BEA3-8E037CD3A568}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7983F6C6-DD42-4BDB-BEA3-8E037CD3A568}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7983F6C6-DD42-4BDB-BEA3-8E037CD3A568}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7983F6C6-DD42-4BDB-BEA3-8E037CD3A568}.Release|Any CPU.Build.0 = Release|Any CPU
 		{12BD18EC-6B99-40DE-8E75-00BDB501F14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{12BD18EC-6B99-40DE-8E75-00BDB501F14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12BD18EC-6B99-40DE-8E75-00BDB501F14D}.Release|Any CPU.ActiveCfg = Release|Any CPU

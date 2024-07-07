@@ -82,7 +82,7 @@ namespace CSharpConcepts
     public class testDelegate
     {
 
-        public delegate void addnum(int x, int y);
+        public delegate void addnum1(int x, int y);
 
         public void sum(int a, int b)
         {

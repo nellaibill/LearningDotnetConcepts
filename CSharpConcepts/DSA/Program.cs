@@ -1,10 +1,24 @@
-﻿using DSA;
-using System.Collections;
+﻿
 
+using CSharpConcepts;
+using CSharpConcepts.DSA;
+using CSharpConcepts.EFCore;
+using CSharpConcepts.OOPS;
 
+EfCoreLogic.AddValues();
+EfCoreLogic.GetValues();
+var delegateTesting = new DelegateTesting();
+var response = delegateTesting.Execute((x) => x * x, Console.WriteLine, 5);
+/*
 int test = 12345;
 Console.WriteLine(test.ToString().Sum(x => x - '0'));
-
+int[] test1 = new int[] { 1, 2, 3, 4, 5, 6,7,8,4,9 };
+int[] test2 = new int[] { 8,9,10}; 
+CollectionTest.RemoveDuplicates(test1);
+CollectionTest.MaximumInteger(test1);
+CollectionTest.ReverseString("Saleem");
+CollectionTest.MergeArrays(test1,test2);
+CollectionTest.IntersectArrays(test1,test2);
 /* 
 ArrayLogics.RemoveDuplicates(new int[] {1,2,3,4,2,3,4,4,5,5});
 Console.WriteLine(ArrayLogics.GetFirstUniqueCharacter("loveleetcode"));
@@ -225,12 +239,12 @@ void LoadArrayPrograms()
     ArrayLogics.DrawLine();
 
 
-    int[] getConcatenationResult = DSA.ArrayLogics.GetConcatenation([1, 2, 1]);
+    int[] getConcatenationResult = ArrayLogics.GetConcatenation([1, 2, 1]);
     Console.WriteLine($"getConcatenationResult): [{string.Join(", ", getConcatenationResult)}]");
 
     ArrayLogics.DrawLine();
 
-    int[] result = DSA.ArrayLogics.FindSumPositions([3, 2, 4], 6);
+    int[] result = ArrayLogics.FindSumPositions([3, 2, 4], 6);
     Console.WriteLine($"Indices of elements that sum up to the target: [{result[0]}, {result[1]}]");
 
     ArrayLogics.DrawLine();

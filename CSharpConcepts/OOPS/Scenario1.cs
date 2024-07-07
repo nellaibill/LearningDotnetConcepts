@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OOPS
+namespace CSharpConcepts.OOPS
 {
     interface I1 { void Method1(); }
     interface I2 { void Method1(); }

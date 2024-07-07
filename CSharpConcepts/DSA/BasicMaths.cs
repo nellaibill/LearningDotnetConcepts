@@ -1,6 +1,6 @@
 ﻿using System.Threading.Channels;
 
-namespace DSA
+namespace CSharpConcepts.DSA
 {
     public class BasicMaths
     {

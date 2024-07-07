@@ -1,22 +1,18 @@
-﻿using CSharpConcepts;
-using System.Reflection;
-using System.Collections;
-using static CSharpConcepts.testDelegate;
-Cat c = new Cat();
-c.Eat();
+﻿using System;
+
+namespace CSharpConcepts
+{
+    partial class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Hello from Program.cs!");
+        }
+    }
+}
 
 
-string[] test = new string[10];
-test[0] = "123";
-
-ArrayList test1 = new ArrayList();
-test1.Add("123456");
-
-Hashtable test2 = new Hashtable();
-test2.Add("a1", "123");
-
-string test3 = test2["a1"].ToString();
-Console.WriteLine(test3);
+//CollectionTest.RemoveDuplicates(new int[] { 1, 2, 3 ,1,5});
 
 /*
 
