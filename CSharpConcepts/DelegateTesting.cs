@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace CSharpConcepts
 {
+    public delegate int Calculation(int a, int b);
     public class DelegateTesting
     {
+        
         public int Execute(Func<int, int> calculate, Action<int> print, int input)
         {
             var result = calculate(input);

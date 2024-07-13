@@ -11,6 +11,7 @@ namespace CSharpConcepts
         public static string LogPath { get; private set; }
         static StaticConstructor()
         {
+            Console.WriteLine("Called Once");
             LogPath = "abc.txt";
         }
         public static void Log(string message)

@@ -19,12 +19,4 @@ namespace CSharpConcepts
         }
     }
 
-    public class Customer
-    {
-
-    }
-    public class Supplier
-    {
-
-    }
 }

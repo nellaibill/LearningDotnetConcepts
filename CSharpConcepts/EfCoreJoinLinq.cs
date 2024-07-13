@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using CSharpConcepts.Models;
 
 namespace CSharpConcepts
 {
@@ -16,7 +12,7 @@ namespace CSharpConcepts
                     new Employee { EmployeeId = 4, Name = "Sue", DepartmentId = 1 }
                 };
 
-                        List<Department> departments = new List<Department>
+        List<Department> departments = new List<Department>
                 {
                     new Department { DepartmentId = 1, DepartmentName = "HR" },
                     new Department { DepartmentId = 2, DepartmentName = "IT" },
@@ -33,22 +29,11 @@ namespace CSharpConcepts
                              EmployeeName = e.Name,
                              DepartmentName = d?.DepartmentName ?? "No Department"
                          };
-            foreach(var e in result)
+            foreach (var e in result)
             {
                 Console.WriteLine(e.EmployeeName + " : " + e.DepartmentName);
             }
         }
     }
-    public class Employee
-    {
-        public int EmployeeId { get; set; }
-        public string Name { get; set; }
-        public int? DepartmentId { get; set; }
-    }
 
-    public class Department
-    {
-        public int DepartmentId { get; set; }
-        public string DepartmentName { get; set; }
-    }
 }

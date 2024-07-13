@@ -1,0 +1,20 @@
+﻿@using LearningMVCCore.Controllers
+@model ContactModal
+
+@{
+    ViewData["Title"] = "Privacy Policy";
+    var message = ViewBag.Message;
+}
+<h1>@ViewData["Title"]</h1>
+
+<h2>
+ViewBagMessage : From Controller - @message
+</h2>
+
+<h3> 
+    Model Data are displayed here : <br />
+    @Model.Name <br/>
+    @Model.Email<br />
+</h3>
+
+<p>Use this page to detail your site's privacy policy.</p>

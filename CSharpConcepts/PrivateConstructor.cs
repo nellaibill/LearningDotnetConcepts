@@ -11,6 +11,7 @@ namespace CSharpConcepts
         public string Name { get; set; }
         private PrivateConstructor()
         {
+            Console.WriteLine("Private Constructor");
         }
         private PrivateConstructor(string name)
         {

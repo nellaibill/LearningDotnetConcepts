@@ -10,6 +10,8 @@ namespace CSharpConcepts.EFCore
 {
     public class EfCoreLogic
     {
+
+
         public static void RemoveValues()
         {
             using (var context = new OrderContext())
@@ -48,6 +50,22 @@ namespace CSharpConcepts.EFCore
                     {
                         Console.WriteLine(item2.ProductName);
                     }
+                }
+            }
+        }
+        public static void UseTransaction()
+        {
+            using (var context = new OrderContext())
+            {
+                using var transaction=context.Database.BeginTransaction();
+                try
+                {
+                    context.SaveChanges();
+                    transaction.Commit();
+                }
+                catch
+                {
+                    transaction.Rollback();
                 }
             }
         }
