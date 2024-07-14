@@ -20,7 +20,7 @@
             // Define a retry policy: retry up to 3 times with a delay of 2 seconds between retries
             _retryPolicy = Policy
                 .HandleResult<HttpResponseMessage>(r => !r.IsSuccessStatusCode)
-                .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(2));
+                .WaitAndRetryAsync(3, retryAttempt => TimeSpan.FromSeconds(5));
 
             // Define a circuit breaker policy: break the circuit after 2 consecutive failures, for 1 minute
             _circuitBreakerPolicy = Policy
