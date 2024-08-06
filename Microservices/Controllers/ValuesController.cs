@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Antiforgery;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Microservices.Controllers
@@ -6,18 +7,27 @@ namespace Microservices.Controllers
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-   // [ServiceFilter(typeof(CustomExceptionFilter))]
+     [ServiceFilter(typeof(CustomExceptionFilter))]
     public class ValuesController : ControllerBase
     {
         private readonly ILogger<ValuesController> _logger;
+           
+        private readonly IAntiforgery _antiforgery;
 
-        public ValuesController(ILogger<ValuesController> logger)
+        public ValuesController(ILogger<ValuesController> logger, IAntiforgery antiforgery)
         {
             _logger = logger;
+            _antiforgery = antiforgery;
         }
 
+        [HttpGet("api/csrf-token")]
+        public IActionResult GetCsrfToken()
+        {
+            var tokens = _antiforgery.GetAndStoreTokens(HttpContext);
+            return Ok(new { token = tokens.RequestToken });
+        }
         [HttpGet]
-        [ResponseCache(Duration = 60)]
+        [ResponseCache(Duration = 600)]
         public IActionResult Get()
         {
             _logger.LogInformation("Executing Get action");
@@ -49,8 +59,17 @@ namespace Microservices.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            var sessiondata = HttpContext.Session.GetString("SessionKeyName");
-            return Ok(sessiondata);
+            var sessionData = HttpContext.Session.GetString("SessionKeyName");
+
+            if (string.IsNullOrEmpty(sessionData))
+            {
+                return NotFound("Session data not found");
+            }
+
+            return Ok(sessionData);
+
         }
     }
+    
+
 }

@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34221.43
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskProgramming", "TaskProgramming\TaskProgramming.csproj", "{ABE2BF9F-F5E1-47F1-AE68-8AB9D57BB509}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRSample", "SignalRSample\SignalRSample.csproj", "{317B3979-59C4-4AC0-BAD8-290AFB416911}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{4092FB0F-378D-4ED0-B6F5-1A3D993A423B}"
@@ -13,11 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Filters", "Filters\Filters.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Auth-DB-EFCore-Reg-Login", "Auth-DB-EFCore-Reg-Login\Auth-DB-EFCore-Reg-Login.csproj", "{A9E01243-4E24-4B54-AB3A-ABC2330C13F0}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Synch-Asynch-Delegates-and-Events", "Synch-Asynch-Delegates-MulticastDelegates-and-Events\Synch-Asynch-Delegates-and-Events.csproj", "{12BD18EC-6B99-40DE-8E75-00BDB501F14D}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharpConcepts", "CSharpConcepts\CSharpConcepts.csproj", "{8031652E-C569-475C-A683-5406D7CC2AAE}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PerformanceTuning", "PerformanceTuning\PerformanceTuning.csproj", "{93AF54F9-BC99-4774-AD39-DEDFE19E8980}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microservices", "Microservices\Microservices.csproj", "{0F266D64-6D84-4637-ACF2-F2B473D58701}"
 EndProject
@@ -25,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LearningMVCCore", "Learning
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MVCCoreTraining", "MVCCoreTraining\MVCCoreTraining.csproj", "{DBADB1D8-84F4-4FDF-8376-15576744A1C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearningDockerWithWebApi", "LearningDockerWithWebApi\LearningDockerWithWebApi.csproj", "{6C34E347-9E2D-461E-9AC6-38CD25B07674}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedConcepts", "AdvancedConcepts\AdvancedConcepts.csproj", "{87E59AD5-D23D-4880-8C32-518F4E8344F5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,10 +27,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{ABE2BF9F-F5E1-47F1-AE68-8AB9D57BB509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{ABE2BF9F-F5E1-47F1-AE68-8AB9D57BB509}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{ABE2BF9F-F5E1-47F1-AE68-8AB9D57BB509}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{ABE2BF9F-F5E1-47F1-AE68-8AB9D57BB509}.Release|Any CPU.Build.0 = Release|Any CPU
 		{317B3979-59C4-4AC0-BAD8-290AFB416911}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{317B3979-59C4-4AC0-BAD8-290AFB416911}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{317B3979-59C4-4AC0-BAD8-290AFB416911}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -53,18 +43,10 @@ Global
 		{A9E01243-4E24-4B54-AB3A-ABC2330C13F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9E01243-4E24-4B54-AB3A-ABC2330C13F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9E01243-4E24-4B54-AB3A-ABC2330C13F0}.Release|Any CPU.Build.0 = Release|Any CPU
-		{12BD18EC-6B99-40DE-8E75-00BDB501F14D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{12BD18EC-6B99-40DE-8E75-00BDB501F14D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{12BD18EC-6B99-40DE-8E75-00BDB501F14D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{12BD18EC-6B99-40DE-8E75-00BDB501F14D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8031652E-C569-475C-A683-5406D7CC2AAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8031652E-C569-475C-A683-5406D7CC2AAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8031652E-C569-475C-A683-5406D7CC2AAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8031652E-C569-475C-A683-5406D7CC2AAE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{93AF54F9-BC99-4774-AD39-DEDFE19E8980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93AF54F9-BC99-4774-AD39-DEDFE19E8980}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93AF54F9-BC99-4774-AD39-DEDFE19E8980}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93AF54F9-BC99-4774-AD39-DEDFE19E8980}.Release|Any CPU.Build.0 = Release|Any CPU
 		{0F266D64-6D84-4637-ACF2-F2B473D58701}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0F266D64-6D84-4637-ACF2-F2B473D58701}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F266D64-6D84-4637-ACF2-F2B473D58701}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -77,10 +59,10 @@ Global
 		{DBADB1D8-84F4-4FDF-8376-15576744A1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBADB1D8-84F4-4FDF-8376-15576744A1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBADB1D8-84F4-4FDF-8376-15576744A1C1}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6C34E347-9E2D-461E-9AC6-38CD25B07674}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6C34E347-9E2D-461E-9AC6-38CD25B07674}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6C34E347-9E2D-461E-9AC6-38CD25B07674}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6C34E347-9E2D-461E-9AC6-38CD25B07674}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87E59AD5-D23D-4880-8C32-518F4E8344F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87E59AD5-D23D-4880-8C32-518F4E8344F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87E59AD5-D23D-4880-8C32-518F4E8344F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87E59AD5-D23D-4880-8C32-518F4E8344F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

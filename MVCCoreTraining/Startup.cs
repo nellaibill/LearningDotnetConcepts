@@ -40,7 +40,7 @@ namespace MVCCoreTraining
              });
             //services.
             services.AddControllersWithViews();
-            services.AddSingleton<DBLayer, Linq>();
+            services.AddTransient<DBLayer, Linq>();
             services.AddScoped<PatientDbContext>();
             services.AddCors(o=>o.AddPolicy("AllowMyOrigin",builder =>
             {

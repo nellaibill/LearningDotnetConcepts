@@ -6,32 +6,45 @@ namespace CSharpConcepts.DSA
     public static class String_Array_Program
     {
 
-            public static int CountMatches(IList<IList<string>> items, string ruleKey, string ruleValue)
-            {
+
+        public static string ReverseString(string s)
+        {
+            Console.WriteLine("Input: s = \"hello\"\r\nOutput: \"olleh\"");
+     
+
+            char[] chars = s.ToCharArray();
+            Array.Reverse(chars);
+            return new string(chars);
+
+        }
+
+        public static int CountMatches(IList<IList<string>> items, string ruleKey, string ruleValue)
+        {
             Console.WriteLine("Example 1:\r\n\r\nInput: items = [[\"phone\",\"blue\",\"pixel\"],[\"computer\",\"silver\",\"lenovo\"],[\"phone\",\"gold\",\"iphone\"]], ruleKey = \"color\", ruleValue = \"silver\"\r\nOutput: 1\r\nExplanation: There is only one item matching the given rule, which is [\"computer\",\"silver\",\"lenovo\"].\r\nExample 2:\r\n\r\nInput: items = [[\"phone\",\"blue\",\"pixel\"],[\"computer\",\"silver\",\"phone\"],[\"phone\",\"gold\",\"iphone\"]], ruleKey = \"type\", ruleValue = \"phone\"\r\nOutput: 2\r\nExplanation: There are only two items matching the given rule, which are [\"phone\",\"blue\",\"pixel\"] and [\"phone\",\"gold\",\"iphone\"]. Note that the item [\"computer\",\"silver\",\"phone\"] does not match.");
-                int ruleKeyIndex = 2;
-                int result = 0;
-                if (ruleKey == "type")
-                    ruleKeyIndex = 0;
-                else if (ruleKey == "color")
-                    ruleKeyIndex = 1;
-                for (int i = 0; i < items.Count; i++)
+            int ruleKeyIndex = 2;
+            int result = 0;
+            if (ruleKey == "type")
+                ruleKeyIndex = 0;
+            else if (ruleKey == "color")
+                ruleKeyIndex = 1;
+            for (int i = 0; i < items.Count; i++)
+            {
+                if (items[i][ruleKeyIndex] == ruleValue)
                 {
-                   if (items[i][ruleKeyIndex] == ruleValue)
-                        {
-                            result++;
-                        }
+                    result++;
                 }
-                return result;
             }
- 
+            return result;
+        }
+
         public static char firstNonRepeatedCharacter(string input)
         {
             if (input != null)
             {
-               char[] chars = input.ToCharArray();
-               
-                foreach (char c in input) {
+                char[] chars = input.ToCharArray();
+
+                foreach (char c in input)
+                {
                     int count = 0;
                     for (int i = 0; i < chars.Length; i++)
                     {
@@ -39,24 +52,24 @@ namespace CSharpConcepts.DSA
                         {
                             count++;
                         }
-                        if (count == 1 && i == chars.Length-1)
+                        if (count == 1 && i == chars.Length - 1)
                         {
                             return c;
                         }
                     }
                 }
-               
+
             }
             return '\0';
         }
-        public static  bool IsPathCrossing(string path)
+        public static bool IsPathCrossing(string path)
         {
             Console.WriteLine("Input: path = \"NESWW\"\r\nOutput: true\r\nExplanation: Notice that the path visits the origin twice.");
             bool result = false;
             char[] chars = path.ToCharArray();
             int latitude = 0;
             int longitude = 0;
-            HashSet<string> valuePairs = new (){ "0,0"};
+            HashSet<string> valuePairs = new() { "0,0" };
             for (int i = 0; i < chars.Length; i++)
             {
                 switch (chars[i])
@@ -100,7 +113,7 @@ namespace CSharpConcepts.DSA
         {
             //{1,2,4,7,7,5}
             int largest = nums[0];
-             int sLargest = -1;
+            int sLargest = -1;
 
             for (int i = 1; i < nums.Length; i++)
             {
@@ -109,7 +122,8 @@ namespace CSharpConcepts.DSA
                     sLargest = largest;
                     largest = nums[i];
                 }
-                else if ((nums[i] > sLargest) && nums[i] != largest) {
+                else if ((nums[i] > sLargest) && nums[i] != largest)
+                {
                     sLargest = nums[i];
                 }
             }

@@ -18,7 +18,7 @@
         {
             try
             {
-                HttpResponseMessage response = await _resilientHttpClient.GetAsync("https://dummy.restapiexample.com/api/v1/employee");
+                HttpResponseMessage response = await _resilientHttpClient.GetAsync("https://dummy.restapiexample.com/api/v1/Employee");
 
                 if (response.IsSuccessStatusCode)
                 {

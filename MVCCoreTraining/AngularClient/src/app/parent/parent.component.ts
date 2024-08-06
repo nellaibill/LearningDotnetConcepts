@@ -1,11 +1,12 @@
-import { Component, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ViewChild, AfterViewInit, ViewEncapsulation } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
 import { CanComponentDeactivate } from '../common/can-deactivate-guard';
 
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
-  styleUrls: ['./parent.component.css']
+  styleUrls: ['./parent.component.css'],
+  encapsulation:ViewEncapsulation.Emulated
 })
 export class ParentComponent implements AfterViewInit,CanComponentDeactivate {
   unsavedChanges = false;

@@ -1,10 +1,48 @@
 ﻿using CSharpConcepts;
-using CSharpConcepts.DSA;
-using CSharpConcepts.EFCore;
-using CSharpConcepts.OOPS;
+
 using System;
+using System.Collections;
+
+virtual_override_new v = new virtual_override_new();
+v.Print();
 
 
+/*
+ArrayList hs = new ArrayList();
+hs.Add(1);
+hs.Add(1);
+hs.Add(3);
+DelegateEvents_Emp_Mgmt emp = new DelegateEvents_Emp_Mgmt();
+emp.Test();
+
+
+var_dyanamic_object var_dyanamic_object = new var_dyanamic_object();
+var_dyanamic_object.varExample();
+var_dyanamic_object.dynamicExample();
+var_dyanamic_object.objectExample();
+
+Console.WriteLine("Starting asynchronous operation...");
+var fetchDataTask = Synchronous_Asynchronous.FetchDataAsynchronously();
+
+Console.WriteLine("Starting asynchronous additional task...");
+var additionalTask = Synchronous_Asynchronous.AdditionalAsynchrousTask();
+
+await fetchDataTask;
+Console.WriteLine("Asynchronous additional  operation completed.");
+
+await additionalTask;
+Console.WriteLine("Additional asynchrous task completed.");
+
+Linq_Questions.question12();
+
+Finalize_Dispose fd = new Finalize_Dispose();
+fd.Dispose();
+Linq_Join lq= new Linq_Join();
+lq.LoadData();
+
+
+Int_qns int_qn = new Int_qns();
+int_qn.question8();
 
 Linq_Questions.question11();
 StaticConstructor.Log("Hello");
@@ -12,7 +50,7 @@ StaticConstructor.Log("Hello1");
 PrivateConstructor.PrintMessage();
 Console.ReadLine();
 //EfCoreLogic.GetValues();
-/*
+
 DelegateTesting delegateTesting = new DelegateTesting();
 Calculation calc = DelegateTesting.Add;
 Console.WriteLine(calc.Invoke(10, 20));

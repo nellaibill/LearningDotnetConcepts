@@ -113,5 +113,31 @@ namespace CSharpConcepts.DSA
             }
             return stack.Count == 0;
         }
+
+        public  void question8()
+        {
+            string word = "aabcccccaaa";
+            char previousCharacter = word[0];
+            //would become  "a2b1c5a3.
+            List<char> result = new List<char>();
+            foreach(char c in word)
+            {
+                if (previousCharacter == c)
+                {
+                    result.Add(c);
+                }
+                else
+                {
+                    Console.Write(previousCharacter+":" + result.Count);
+                    result.Clear();
+                }
+                
+                previousCharacter = c;
+
+
+            }
+            Console.Write(previousCharacter + ":" + result.Count);
+        }
     }
+
 }

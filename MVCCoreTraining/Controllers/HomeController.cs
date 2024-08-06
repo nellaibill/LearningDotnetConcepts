@@ -27,9 +27,10 @@ namespace MVCCoreTraining.Controllers
         public IActionResult Index()
         {
             string emplist;
-            if (!_cache.TryGetValue("employeeList", out emplist)) { 
-                _cache.Set("employeeList", "Hello", TimeSpan.FromMinutes(10));
-        }
+             if (!_cache.TryGetValue("EmployeeList", out emplist)) 
+                { 
+                  _cache.Set("EmployeeList", "Hello", TimeSpan.FromMinutes(10));
+                }
             return View();
         }
 

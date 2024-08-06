@@ -1,0 +1,25 @@
+@AdvancedConcepts_HostAddress = http://localhost:5011
+
+GET {{AdvancedConcepts_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+GET {{AdvancedConcepts_HostAddress}}/MultiThreading/method1
+Accept: application/json
+
+###
+
+
+GET {{AdvancedConcepts_HostAddress}}/MultiThreading/method2
+Accept: application/json
+###
+
+
+GET {{AdvancedConcepts_HostAddress}}/Filters/TestActionFilter
+Accept: application/json
+###
+
+GET {{AdvancedConcepts_HostAddress}}/Filters/ThrowException
+Accept: application/json
+###

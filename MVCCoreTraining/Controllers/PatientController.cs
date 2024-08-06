@@ -4,7 +4,7 @@ using MVCCoreTraining.Models;
 
 namespace MVCCoreTraining.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class PatientController : Controller
     {
         private PatientDbContext _db { get; }

@@ -17,14 +17,14 @@ namespace CSharpConcepts
         }
         public static void question2()
         {
-            List<Employee> employees = new List<Employee>
+            List<Employee> Employees = new List<Employee>
             {
                 new Employee { EmployeeId = 1, Name = "Alice", Age = 25 },
                 new Employee { EmployeeId = 2, Name = "Bob", Age = 35 },
                 new Employee { EmployeeId = 3, Name = "Charlie", Age = 40 }
             };
 
-            var result = employees.Where(x => x.Age > 30).ToList();
+            var result = Employees.Where(x => x.Age > 30).ToList();
             result.ForEach(x => Console.WriteLine(x.Name));
         }
 
@@ -132,6 +132,39 @@ namespace CSharpConcepts
             var result = lstDetails.OrderByDescending(x=>x).Skip(1).Take(1).ToList();
             Console.WriteLine(string.Join(",",result));
         }
+        public static void question12()
+        {
+            var records = new List<Record>
+        {
+            new Record { Name = "E1", FromDate = new DateTime(2010, 1, 1), ToDate = new DateTime(2014, 12, 31) },
+            new Record { Name = "E2", FromDate = new DateTime(2014, 1, 1), ToDate = new DateTime(2024, 12, 31) },
+            new Record { Name = "E3", FromDate = new DateTime(2024, 1, 1), ToDate = new DateTime(2034, 12, 31) },
+            new Record { Name = "E4", FromDate = new DateTime(2024, 1, 1), ToDate = null }
+        };
+
+            DateTime currentDate = DateTime.Now;
+
+            var filteredRecords = records.Select(r =>
+                r.FromDate <= currentDate &&
+                (!r.ToDate.HasValue || r.ToDate.Value >= currentDate)
+            ).ToList();
+
+            foreach (var record in filteredRecords)
+            {
+                //Console.WriteLine($"Name: {record.Name}, FromDate: {record.FromDate.ToShortDateString()}, ToDate: {(record.ToDate.HasValue ? record.ToDate.Value.ToShortDateString() : "Infinity")}");
+            }
+        }
+
+        public class Record
+        {
+            public string Name { get; set; }
+            public DateTime FromDate { get; set; }
+            public DateTime? ToDate { get; set; }
+        }
 
     }
+   
+
+
 }
+

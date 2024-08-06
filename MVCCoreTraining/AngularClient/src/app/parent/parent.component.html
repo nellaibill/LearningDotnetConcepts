@@ -1,5 +1,6 @@
 <h1>Parent Component</h1>
-<app-child [childMessage]="parentMessage" (messageEvent)="receiveMessage($event)"></app-child>
+
 <p>Message from Child: {{ receivedMessage }}</p>
 <p>Message from Child (ViewChild): {{ childViewMessage }}</p>
 <button (click)="onNavigateAway()">Navigate Away</button>
+<app-child [childMessage]="parentMessage" (messageEvent)="receiveMessage($event)"></app-child>

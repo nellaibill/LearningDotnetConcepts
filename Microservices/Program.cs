@@ -10,6 +10,11 @@ builder.Services.AddControllers(options =>
 {
     options.Filters.Add<CustomExceptionFilter>();
 });
+// Add antiforgery services
+builder.Services.AddAntiforgery(options =>
+{
+    options.HeaderName = "X-CSRF-TOKEN"; // Optional: Change the header name
+});
 // Add Application Insights telemetry
 builder.Services.AddApplicationInsightsTelemetry(builder.Configuration["ApplicationInsights:InstrumentationKey"]);
 

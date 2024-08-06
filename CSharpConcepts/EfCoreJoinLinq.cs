@@ -2,9 +2,10 @@
 
 namespace CSharpConcepts
 {
+
     internal class EfCoreJoinLinq
     {
-        List<Employee> employees = new List<Employee>
+        List<Employee> Employees = new List<Employee>
                 {
                     new Employee { EmployeeId = 1, Name = "John", DepartmentId = 1 },
                     new Employee { EmployeeId = 2, Name = "Jane", DepartmentId = 2 },
@@ -20,7 +21,7 @@ namespace CSharpConcepts
                 };
         public void getData()
         {
-            var result = from e in employees
+            var result = from e in Employees
                          join d in departments
                          on e.DepartmentId equals d.DepartmentId into ed
                          from d in ed.DefaultIfEmpty()
