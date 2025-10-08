@@ -40,7 +40,7 @@ namespace CSharpConcepts
 
             var result = students.GroupBy(x => x.Grade).ToList();
             Console.WriteLine();
-        }
+     }
         public static void question4()
         {
             List<Product> products = new List<Product>

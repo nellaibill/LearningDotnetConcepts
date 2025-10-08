@@ -6,10 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers(options =>
-{
-    options.Filters.Add<CustomExceptionFilter>();
-});
+builder.Services.AddControllers();
 // Add antiforgery services
 builder.Services.AddAntiforgery(options =>
 {
@@ -42,7 +39,6 @@ builder.Services.AddSession(options =>
     options.Cookie.IsEssential = true; // Make the session cookie essential
 });
 var app = builder.Build();
-app.UseMiddleware<CustomExceptionMiddleware>();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {

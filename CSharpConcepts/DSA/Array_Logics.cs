@@ -2,6 +2,7 @@
 
 namespace CSharpConcepts.DSA
 {
+
     public static class ArrayLogics
     {
         public static void RemoveDuplicates(int[] test)

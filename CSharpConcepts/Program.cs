@@ -1,13 +1,30 @@
 ﻿using CSharpConcepts;
-
+using CSharpConcepts.DSA;
 using System;
 using System.Collections;
 
-virtual_override_new v = new virtual_override_new();
-v.Print();
+DataStructuresDemo dsd = new DataStructuresDemo();
+dsd.Print();
+
 
 
 /*
+
+String_Array_Program.RearrangeArray();
+
+//Write a program to sum of digits of a number
+int number = 12345;
+int sum = 0;
+while (number > 0)
+{
+    sum+=number % 10;
+    number = number / 10;
+}
+Console.WriteLine("Sum of digits of a number is : " + sum);
+Console.ReadLine();
+
+virtual_override_new v = new virtual_override_new();
+v.Print();
 ArrayList hs = new ArrayList();
 hs.Add(1);
 hs.Add(1);

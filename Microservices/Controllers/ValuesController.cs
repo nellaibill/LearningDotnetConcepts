@@ -7,7 +7,6 @@ namespace Microservices.Controllers
     [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]")]
     [ApiController]
-     [ServiceFilter(typeof(CustomExceptionFilter))]
     public class ValuesController : ControllerBase
     {
         private readonly ILogger<ValuesController> _logger;

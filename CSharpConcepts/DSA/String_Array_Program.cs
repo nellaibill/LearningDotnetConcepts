@@ -1,10 +1,56 @@
-﻿using System.Collections;
+﻿using Microsoft.AspNetCore.Routing;
+using System.Collections;
 using System.Text;
 
 namespace CSharpConcepts.DSA
 {
     public static class String_Array_Program
     {
+
+        public static void RearrangeArray()
+        {
+            Console.WriteLine("ReArrange Array");
+            // Rearrange the array such that all negative numbers are moved to the beginning
+            int[] array = { -1, 2, -3, 4, -5, 6, -7, 8, 9, -10 };
+
+            int n = array.Length;
+
+            int j = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                // Check if the current element is negative
+                if (array[i] < 0)
+                {
+                    // Swap the current element with the element at index j
+                    if (i != j)
+                    {
+                        // Swap the current element with the element at index j
+                        int temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
+                    }
+                    // Increment j to move to the next position for negative numbers
+                    j++;
+                }
+            }
+            foreach(int num in array)
+            {
+                Console.WriteLine(num);
+            }
+        }
+
+        public static int[] RotateArray(int[] nums, int k)
+        {
+            int[] result = new int[nums.Length];
+            int rotation = k % nums.Length;
+            for (int i = 0; i < nums.Length; i++)
+            {
+                int newIndex = (i + rotation) % nums.Length;
+                result[newIndex] = nums[i];
+            }
+            return result;
+        }
 
 
         public static string ReverseString(string s)
